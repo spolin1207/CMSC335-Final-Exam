@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB (If scripts don't work, add to the bottom of the page instead to see if it fixes the issue) -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+
+  <title>Submissions</title>
+</head>
+<style>
+  /* Sidebar */
+  .container {
+    max-width: 100% !important;
+  }
+</style>
+
+<body>
+  <!-- Navbar -->
+  <%- include('components/navigation'); %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%- include('components/submissionNavbar'); %>
+      </div>
+      <div class="col-md-9">
+        <main style="margin-top: 58px;">
+          <h3>Submission Guidelines</h3>
+          <p>
+            Research from any discipline (natural sciences, social sciences, humanities, etc.) is eligible for publication
+            in the Maryland Undergraduate Research Journal (MURJ).
+          </p>
+          <br>
+          <h3>Eligibility</h3>
+          <ul>
+            <li>
+              Primary author must be a University of Maryland undergraduate, or a recent graduate (≤1 year) of the
+              University of Maryland.
+            </li>
+            <li>
+              Submissions must contain original research conducted by a University of Maryland undergraduate.
+            </li>
+            <li>
+              Submissions may not have been previously published in another research journal.
+            </li>
+            <li>
+              Submissions must be approved for publication in MURJ by a mentor (principal investigator, faculty
+              member, etc.).
+            </li>
+            <li>
+              Mentors may be listed as secondary authors.
+            </li>
+          </ul>
+          <br>
+          <h3>Formatting</h3>
+          <ul>
+            <li>
+              Submissions should fall within 2,000 to 4,000 words in length; submissions that fall outside this range
+              will also be considered.
+            </li>
+            <li>
+              Any relevant figures/tables should be included in the submission, and labeled appropriately. </li>
+            <li>
+              Submissions should be a single file; separate attachments will not be considered without prior approval. 
+            </li>
+            <li>
+              Submissions must be in one of the following file formats: DOC, DOCX.
+            </li>
+            <li>
+              Successful submissions will be formatted by MURJ prior to publication.
+            </li>
+          </ul>
+          <br>
+          <h3>Structure</h3>
+          <ul>
+            <li>
+              Submissions do not need to follow any particular structure; however, submissions should be structured
+              similarly to other research articles.
+            </li>
+            <li>
+              Submissions should include an abstract as a brief summary; abstracts will not be included in the word count. 
+            <li>
+              Submissions should follow APA style for any references, citations, etc.
+            </li>
+          </ul>
+          <br>
+          <h3>Submission Deadline</h3>
+          <p>
+            MURJ has no submission deadline; submissions are accepted on a rolling basis.
+          </p>
+          <br>
+          <h3>Questions?</h3>
+          <p>
+            If you have questions about any of the above Submission Guidelines, please email us at <a style="text-decoration: underline" href="mailto: umd.murj@gmail.com" target="_blank">umd.murj@gmail.com</a>
+          </p>
+          <br>
+          <!-- <h3>Copyright Notice</h3>
+          <p>
+            The Maryland Undergraduate Research Journal is an open-access journal.
+            Works published in the Maryland Undergraduate Research Journal will be distributed under a
+            <a style="text-decoration: underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License (CC BY)</a>.
+            Authors maintain copyright ownership of their work, but they give permission for others to share
+            and adapt the work with appropriate credit and links to the original publication.
+          </p>
+          <br>
+          <h3>Privacy Statement</h3>
+          <p>
+            Any information collected by the Maryland Undergraduate Research Journal
+            will not be used or disclosed for any purpose other than those specified above.
+          </p> -->
+      </div>
+      </main>
+    </div>
+  </div>
+  <%- include('components/footer'); %>
+</body>
+
+</html>

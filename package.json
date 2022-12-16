@@ -1,0 +1,26 @@
+{
+  "name": "murj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spolin1207/MURJ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spolin1207/MURJ/issues"
+  },
+  "homepage": "https://github.com/spolin1207/MURJ#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "heroku": "^7.60.2",
+    "nodemon": "^2.0.16"
+  }
+}
