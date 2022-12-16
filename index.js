@@ -35,20 +35,6 @@ async function submitOrder(newOrder) {
   await client.db(dbName).collection(dbCollection).insertOne(newOrder);
 }
 
-newsapi.v2.topHeadlines({
-  category: 'technology',
-  language: 'en',
-  country: 'us'
-}).then(response => {
-  console.log(response);
-  /*
-    {
-      status: "ok",
-      articles: [...]
-    }
-  */
-});
-
 // Set EJS View Engine
 app.set("view engine", "ejs");
 
@@ -58,16 +44,19 @@ app.listen(process.env.PORT || 3000, () => {
   console.log("Application running on PORT 3000");
 });
 
-try {
-  client.connect();
-  console.log("successfully connected");
-} catch (e) {
-  console.error(e); 
-}
+
+client.connect();
+
 
 // Home Page
-app.get("/", (req, res) => {
-  res.render("home");
+app.get("/", async (req, res) => {
+  let news = await newsapi.v2.topHeadlines({
+    category: 'technology',
+    language: 'en',
+    country: 'us'
+  })
+  news = news.articles;
+  res.render("home", { news: news });
 });
 
 // Order Page
@@ -78,7 +67,6 @@ app.get("/order", async (req, res) => {
 // Order History Page
 app.get("/order-history", async (req, res) => {
   const orderTable = await getOrderHistory();
-  // console.log(volumes);
   res.render("orderHistory", { orderTable: orderTable });
 });
 

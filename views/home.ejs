@@ -36,96 +36,56 @@
 </style>
 
 <body>
-    <%- include('components/navigation'); %>
-  <header>
-    <!-- Background image -->
-    <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s38786de65b082215/backgroundarea/iae9924e97149e358/version/1628095684/image.jpg'); height: 60vh;">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">UMD Textbook Order System</h1>
-            <!-- <h5 class="mb-4">Fully Operational Website Coming Soon</h5> -->
+  <%- include('components/navigation'); %>
+    <header>
+      <!-- Background image -->
+      <div id="intro-example" class="p-5 text-center bg-image"
+        style="background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s38786de65b082215/backgroundarea/iae9924e97149e358/version/1628095684/image.jpg'); height: 60vh;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">UMD Textbook Order System</h1>
+              <!-- <h5 class="mb-4">Fully Operational Website Coming Soon</h5> -->
 
-            <a class="btn btn-outline-light btn-lg m-2" href="/order" role="button" rel="nofollow">Order</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="/order" role="button" rel="nofollow">Order</a>
 
-            <a class="btn btn-outline-light btn-lg m-2" href="/order-history" role="button">Order History</a>
+              <a class="btn btn-outline-light btn-lg m-2" href="/order-history" role="button">Order History</a>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- Background image -->
+    </header>
+
+    <!-- Newsletter Cards -->
+    <!-- Images must be 1.5:1 ratio (e.g. 780 x 520) -->
+    <div class="container">
+      <div class="row">
+        <% for(var i=0; i < 4; i++) { %>
+          <div class="col-md">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="<%= news[i].urlToImage %>" class="img-fluid" />
+                <a href="<%= news[i].url %>" target="_blank">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <Newsletter>
+                </h5>
+                <h6 style="font-style: italic;">
+                  <%= news[i].title %>
+                </h6>
+                <p class="card-text"><%= news[i].description %></p>
+                <a href="<%= news[i].url %>" class="btn btn-outline-dark" target="_blank">Link</a>
+              </div>
+            </div>
+          </div>
+          <% } %>
       </div>
     </div>
-    <!-- Background image -->
-  </header>
-
-  <!-- Newsletter Cards -->
-  <!-- Images must be 1.5:1 ratio (e.g. 780 x 520) -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md">
-        <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="/newsletterB">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Newsletter</h5>
-            <h6 style="font-style: italic;">A</h6>
-            <p class="card-text">Insert Text</p>
-            <a href="/newsletterB" class="btn btn-outline-dark">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="/newsletterA">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Newsletter</h5>
-            <h6 style="font-style: italic;">B</h6>
-            <p class="card-text">Insert Text</p>
-            <a href="/newsletterA" class="btn btn-outline-dark">View</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <!-- <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Newsletter #3</h5>
-            <h6 style="font-style: italic;">09/01/2022</h6>
-            <p class="card-text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-            <a href="#!" class="btn btn-outline-dark">View</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col-md">
-        <!-- <div class="card">
-          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
-              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Newsletter #3</h5>
-            <h6 style="font-style: italic;">09/01/2022</h6>
-            <p class="card-text">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-            <a href="#!" class="btn btn-outline-dark">View</a>
-          </div>
-        </div> -->
-      </div>
     </div>
-  </div>
 </body>
 
 </html>
