@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB (If scripts don't work, add to the bottom of the page instead to see if it fixes the issue) -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+
+  <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+
+  <title>Order</title>
+</head>
+<style>
+  /* Sidebar */
+  .container {
+    max-width: 100% !important;
+  }
+</style>
+
+<body style="text-align: center;">
+  <!-- Navbar -->
+  <%- include('components/navigation'); %>
+    <div class="container" style="display: inline-block;">
+      <br>
+      <h1>Order Form</h1>
+      <br>
+      <br>
+      <form action="/order" method="post">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" name="name">
+        </div>
+        
+        <br>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email">
+        </div>
+
+        <br />
+        <!-- Textbook input list -->
+        <div>
+          <legend>Select Textbooks:</legend>
+          <select name="books" multiple>
+            <option name="Intro to Java">Intro to Java</option>
+            <option name="Data Science in Python">Data Science in Python</option>
+            <option name="Advanced Algorithms">Advanced Algorithms</option>
+            <option name="Fullstack Development">Fullstack Development</option>
+            <option name="Artificial Intelligence">Artificial Intelligence</option>
+          </select>
+        </div>
+
+        <br>
+        
+        <div>
+          <input type="reset">
+          <input type="submit" value="Submit Order">
+        </div>
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+
+</html>
